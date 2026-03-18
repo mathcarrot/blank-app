@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
 import plotly.express as px
 import base64
 
@@ -10,7 +11,12 @@ def load_font(font_path):
     with open(font_path, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
-# 한글 폰트 적용
+# Matplotlib 한글 폰트 설정
+font_path = 'fonts/NanumGothic-Regular.ttf'
+fm.fontManager.addfont(font_path)
+plt.rcParams['font.family'] = 'NanumGothic'
+
+# 한글 폰트 적용 (CSS)
 font_data = load_font("fonts/NanumGothic-Regular.ttf")
 css = f"""
 <style>
