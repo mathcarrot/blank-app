@@ -40,6 +40,8 @@ data = pd.DataFrame({
 st.subheader("선 그래프")
 fig, ax = plt.subplots()
 ax.plot(data['x'], data['y'])
+ax.set_xlabel('인당')
+ax.set_ylabel('만원')
 st.pyplot(fig)
 
 st.subheader("막대 그래프")
