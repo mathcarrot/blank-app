@@ -8,12 +8,12 @@ body {
     font-family: Arial, sans-serif;
 }
 .stApp {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
 }
 h1, h2, h3 {
     color: #333;
-    font-size: 1.2em;  /* 헤더 글자 크기 줄임 */
+    font-size: 0.9em;  /* 헤더 글자 크기 더 줄임 */
 }
 </style>
 """, unsafe_allow_html=True)
