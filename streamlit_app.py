@@ -1,6 +1,6 @@
 import streamlit as st
 
-# CSS로 디자인 수정: 배경색, 중앙 정렬
+# CSS로 디자인 수정: 배경색, 헤더 크기 조정
 st.markdown("""
 <style>
 body {
@@ -10,10 +10,10 @@ body {
 .stApp {
     max-width: 800px;
     margin: 0 auto;
-    text-align: center;
 }
 h1, h2, h3 {
     color: #333;
+    font-size: 1.2em;  /* 헤더 글자 크기 줄임 */
 }
 </style>
 """, unsafe_allow_html=True)
