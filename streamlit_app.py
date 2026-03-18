@@ -4,9 +4,9 @@ st.title("자기 소개")
 
 st.header("기본 정보 입력")
 
-name = st.text_input("이름을 입력하세요", "강경민")
-age = st.number_input("나이를 입력하세요", min_value=1, max_value=100, value=28)
-grade = st.selectbox("학년을 선택하세요", ["1학년", "2학년", "3학년", "4학년"], index=2)
+name = st.text_input("이름:", "강경민")
+age = st.number_input("나이:", min_value=1, max_value=100, value=28)
+grade = st.selectbox("학년", ["1학년", "2학년", "3학년", "4학년"], index=2)
 
 st.header("추가 자기소개")
 hobby = st.text_input("취미를 입력하세요", "수학 문제 풀기")
