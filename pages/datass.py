@@ -6,17 +6,14 @@ import matplotlib.font_manager as fm
 import plotly.express as px
 import base64
 
-# 폰트 로드 함수
 def load_font(font_path):
     with open(font_path, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
-# Matplotlib 한글 폰트 설정
 font_path = 'fonts/NanumGothic-Regular.ttf'
 fm.fontManager.addfont(font_path)
 plt.rcParams['font.family'] = 'NanumGothic'
 
-# 한글 폰트 적용 (CSS)
 font_data = load_font("fonts/NanumGothic-Regular.ttf")
 css = f"""
 <style>
@@ -29,13 +26,13 @@ body {{
 }}
 </style>
 """
+
 st.markdown(css, unsafe_allow_html=True)
 
 st.title("데이터 시각화 예시")
 
 st.header("샘플 데이터 시각화")
 
-# 샘플 데이터 생성
 np.random.seed(42)
 data = pd.DataFrame({
     'x': np.arange(1, 11),
