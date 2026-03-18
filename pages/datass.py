@@ -3,6 +3,27 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import plotly.express as px
+import base64
+
+# 폰트 로드 함수
+def load_font(font_path):
+    with open(font_path, "rb") as f:
+        return base64.b64encode(f.read()).decode()
+
+# 한글 폰트 적용
+font_data = load_font("fonts/NanumGothic-Regular.ttf")
+css = f"""
+<style>
+@font-face {{
+    font-family: 'NanumGothic';
+    src: url(data:font/ttf;base64,{font_data}) format('truetype');
+}}
+body {{
+    font-family: 'NanumGothic', sans-serif;
+}}
+</style>
+"""
+st.markdown(css, unsafe_allow_html=True)
 
 st.title("데이터 시각화 예시")
 
