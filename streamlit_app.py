@@ -8,7 +8,7 @@ body {
     font-family: Arial, sans-serif;
 }
 .stApp {
-    max-width: 1500px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 h1, h2, h3 {
