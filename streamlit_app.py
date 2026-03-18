@@ -1,22 +1,50 @@
 import streamlit as st
 
+# CSS로 디자인 수정: 배경색, 중앙 정렬
+st.markdown("""
+<style>
+body {
+    background-color: #f0f8ff;  /* 연한 파란색 배경 */
+    font-family: Arial, sans-serif;
+}
+.stApp {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+h1, h2, h3 {
+    color: #333;
+}
+</style>
+""", unsafe_allow_html=True)
+
 st.title("자기 소개")
 
-st.header("기본 정보 입력")
+st.header("강경민")
 
-name = st.text_input("이름:", "강경민")
-age = st.number_input("나이:", min_value=1, max_value=100, value=28)
-grade = st.selectbox("학년", ["1학년", "2학년", "3학년", "4학년"], index=2)
+st.markdown("**이름:** 강경민")
+st.markdown("**나이:** 28살")
+st.markdown("**학년:** 3학년")
+st.markdown("**전공:** 수학교육과")
+st.markdown("**학교:** 인천대학교")
 
-st.header("추가 자기소개")
-hobby = st.text_input("취미를 입력하세요", "수학 문제 풀기")
-goal = st.text_area("목표나 꿈을 입력하세요", "수학교사가 되는 것이 꿈입니다.")
+st.header("취미와 관심사")
+st.write("취미는 수학 문제 풀기와 프로그래밍입니다.")
+st.write("관심사는 교육 기술과 인공지능입니다.")
 
-st.header("자기소개 내용")
-st.write(f"제 이름은 {name}입니다.")
-st.write(f"나이는 {age}살입니다.")
-st.write(f"학년은 {grade}입니다.")
-st.write(f"취미는 {hobby}입니다.")
-st.write(f"목표: {goal}")
-st.write("저는 인천대학교 수학교육과에 재학 중인 학생입니다.")
+st.header("성격과 장점")
+st.write("성격은 긍정적이고 열정적입니다.")
+st.write("장점은 끈기와 문제 해결 능력입니다.")
+
+st.header("목표와 꿈")
+st.write("목표는 수학교사가 되는 것입니다.")
+st.write("꿈은 학생들에게 수학의 재미를 가르치는 것입니다.")
+
+st.header("미래 계획")
+st.write("미래에는 교육 분야에서 혁신을 이루고 싶습니다.")
+st.write("더 많은 사람들에게 수학 교육의 중요성을 알리고 싶습니다.")
+
+st.header("추가 정보")
+st.write("저는 열정적인 학습자이며, 새로운 기술을 배우는 것을 좋아합니다.")
+st.write("팀 프로젝트와 협업을 즐깁니다.")
 
